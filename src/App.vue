@@ -7,11 +7,11 @@
             <TodoSpinner v-if="loading" />
 
             <template v-else>
-           <!--     <TodoFormAdd />
+            <TodoFormAdd />
 
                 <TodoItems />
 
-                <TodoEmpty /> -->
+              <TodoEmpty /> 
             </template>
         </div>
     </div>
@@ -28,12 +28,21 @@ export default {
     name: 'App',
     components: { TodoEmpty, TodoItems, TodoFormAdd, TodoSpinner },
 
+    data(){
+      return {
+        'loading': false,
+      }
+    },
+
 
     created() {
+      this.loading = true;
         axios.get('http://localhost:3000/todos')
             .then((response) => {
               this.$store.commit('storeTodos', response.data)
-            })
+            }).finally(() => {
+              this.loading = false
+        })
     },
 }
 </script>

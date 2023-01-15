@@ -36,7 +36,10 @@ export default {
 
 
     created() {
-      this.$store.dispatch('getTodos')
+      this.loading = true;
+      this.$store.dispatch('getTodos').finally(() => {
+        this.loading = false;
+      })
     },
 }
 </script>

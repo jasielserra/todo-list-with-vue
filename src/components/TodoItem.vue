@@ -4,7 +4,7 @@
 border-gray-400 last:border-b-0">
             <div class="flex items-center justify-center
 mr-2">
-                <button :class="{ 'text-gray-400': isCompleted, 'text-gray-400': !isCompleted }" @click="onCheckClick">
+                <button :class="{ 'text-gray-600': isCompleted, 'text-gray-400': !isCompleted }" @click="onCheckClick">
                     <svg class="w-5 h-5" fill="none"
                          stroke="currentColor" viewBox="0 0 24 24"
                          xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round"
@@ -14,9 +14,9 @@ mr-2">
 
             <div class="w-full">
                 <input
+                    v-model="title"
                     type="text"
                     placeholder="Digite a sua tarefa"
-                    :value="title"
                     class="bg-gray-300 placeholder-gray-500
 text-gray-700 font-light focus:outline-none block w-full appearance-none
 leading-normal mr-3"

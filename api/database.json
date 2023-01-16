@@ -6,9 +6,9 @@
       "completed": true
     },
     {
-      "id": 2,
-      "title": "Estudar Vue",
-      "completed": false
+      "title": "Estudar Vue 4",
+      "completed": false,
+      "id": 2
     },
     {
       "id": 3,
@@ -16,7 +16,7 @@
       "completed": false
     },
     {
-      "title": "Estudar Django",
+      "title": "Estudar Django  3",
       "completed": false,
       "id": 4
     },
@@ -31,7 +31,7 @@
       "id": 6
     },
     {
-      "title": "Newer Format ECMA Script",
+      "title": "Newer Format  Script",
       "completed": false,
       "id": 7
     },
@@ -39,6 +39,11 @@
       "title": "gerenciar força terefa",
       "completed": false,
       "id": 8
+    },
+    {
+      "title": "Adicionar NOva tareha",
+      "completed": false,
+      "id": 9
     }
   ]
 }

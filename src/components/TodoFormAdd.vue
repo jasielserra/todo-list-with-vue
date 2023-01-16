@@ -24,6 +24,8 @@ focus:outline-none"
 </template>
 
 <script>
+//import axios from "axios";
+
 export default {
     data() {
         return {
@@ -32,18 +34,29 @@ export default {
     },
 
     methods: {
-        addTodo() {
-            if (!this.title) {
-                return false;
+        addTodo(){
+          if(!this.title){
+            return;
+          }
+          this.$store.dispatch('addTodo', {
+            title: this.title,
+            completed: false
+          }).finally(() => {
+            this.title = ''
+          })
+          //axios.post('http://localhost:3000/todos', data)
+          console.log('here', this.title);
+ //           if (!this.title) {
+ //               return false;
             }
 
-            this.$store.dispatch('addTodo', {
-                title: this.title,
-                completed: false
-            }).finally(() => {
-                this.title = ''
-            })
+//            this.$store.dispatch('addTodo', {
+//                title: this.title,
+//          completed: false
+//            }).finally(() => {
+//                this.title = ''
+//            })
         },
-    },
-}
+    }
+
 </script>

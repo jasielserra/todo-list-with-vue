@@ -6,7 +6,7 @@
       "completed": true
     },
     {
-      "title": "Estudar Vue 7",
+      "title": "Estudar Vue 10",
       "completed": false,
       "id": 2
     },
@@ -44,6 +44,11 @@
       "title": "Adicionar NOva tareha",
       "completed": false,
       "id": 9
+    },
+    {
+      "title": "Teste 01",
+      "completed": false,
+      "id": 10
     }
   ]
 }

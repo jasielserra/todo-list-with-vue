@@ -26,7 +26,7 @@ leading-normal mr-3"
 
             <div class="ml-auto flex items-center
 justify-center">
-                <button class="focus:outline-none">
+                <button class="focus:outline-none" @click="onDelete">
                     <svg
                         class="ml-3 h-4 w-4 text-gray-500"
                         viewBox="0 0 24 24"
@@ -78,9 +78,9 @@ export default {
     },
 
 
-    updateTodo(){
+    updateTodo() {
 
-        const payload = {
+      const payload = {
         id: this.todo.id,
         data: {
           title: this.title,
@@ -90,15 +90,20 @@ export default {
       }
 
       this.$store.dispatch('updateTodo', payload)
-  //    console.log($evt.target.value);
+      //    console.log($evt.target.value);
     },
 
 
-
-    onCheckClick(){
+    onCheckClick() {
       this.isCompleted = !this.isCompleted
       this.updateTodo()
+    },
+
+
+    onDelete() {
+      this.$store.dispatch('deleteTodo', this.todo.id)
     }
+
   },
 
 }
